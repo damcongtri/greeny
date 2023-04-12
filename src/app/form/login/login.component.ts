@@ -18,6 +18,10 @@ export class LoginComponent implements OnInit {
   constructor(private service: DataService, private router: Router) { }
 
   ngOnInit(): void {
+    this.formData.patchValue({
+      email: "admin@mail.com",
+      password: "123456"
+    })
   }
   submit() {
     if (this.formData.valid) {
