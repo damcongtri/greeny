@@ -1,0 +1,382 @@
+.justify-content-sb {
+    justify-content: space-between;
+
+}
+
+.align-items-ct {
+    align-items: center;
+}
+
+.shop-part {
+    background-color: #f5f6f7;
+}
+
+main {
+    background-color: #f5f6f7;
+}
+
+.single-banner {
+    padding: 100px 0;
+    background-image: url(https://mironmahmud.com/greeny/assets/ltr/images/single-banner.jpg);
+    color: #fff;
+    text-align: center;
+    background-size: cover;
+    margin-bottom: 100px;
+}
+
+.breadcrumb {
+    background: none;
+}
+
+.breadcrumb-item span {
+    font-size: 20px;
+}
+
+.single-banner h2 {
+    text-transform: uppercase;
+    font-weight: 600;
+}
+
+.single-banner .breadcrumb .breadcrumb-item {
+    margin: 0 auto;
+}
+
+
+/* shop-widget */
+.shop-widget {
+    padding: 20px;
+    margin-bottom: 24px;
+    border-radius: 10px;
+    background-color: #fff;
+}
+
+.shop-widget h6 {
+    font-family: 'Rubik', sans-serif;
+    font-weight: 600;
+    text-transform: uppercase;
+    padding-bottom: 12px;
+    width: 100%;
+    border-bottom: 1px solid #e8e8e8;
+}
+
+/* promo */
+.shop-widget-promo {
+    overflow: hidden;
+    border-radius: 6px;
+    margin-bottom: 24px;
+}
+
+.shop-widget-promo img {
+    transition: 0.5s;
+}
+
+.shop-widget-promo img:hover {
+    transform: scale(1.05);
+}
+
+
+/* input-price */
+.shop-widget-group {
+    display: grid;
+    grid-gap: 10px;
+    grid-template-columns: 1fr 1fr;
+    margin: 15px 0;
+}
+
+.ip-price {
+    width: 100%;
+    padding: 10px;
+    text-align: center;
+    border: none;
+    background-color: #f5f5f5;
+    border-radius: 4px;
+    outline: none;
+}
+
+.search-price {
+    padding: 10px;
+    border: none;
+    width: 100%;
+    background-color: #fff;
+    transition: 0.5s;
+    font-weight: 500;
+    font-family: 'Rubik', sans-serif;
+}
+
+.search-price:first-child {
+    border-right: 2px solid #019345;
+}
+
+.search-price:hover {
+    background-color: #019345;
+    color: #fff;
+
+}
+
+
+/* rating and tag*/
+.shop-widget ul {
+    padding: 0;
+    margin: 20px 0;
+}
+
+.shop-widget ul li {
+    margin-bottom: 12px;
+}
+
+.shop-widget-content input {
+    width: 15px;
+    height: 15px;
+    margin-right: 12px
+}
+
+.shop-widget-content label i {
+    font-size: 15px;
+    padding-right: 4px;
+}
+
+.star-y {
+    color: #ffab10;
+}
+
+.star-n {
+    color: #777
+}
+
+/* category */
+.search-category {
+    width: 100%;
+    padding: 8px;
+    font-size: 15px;
+    border: 1px solid #e8e8e8;
+    background-color: #f5f5f5;
+    border-radius: 6px;
+
+    transition: 0.5s
+}
+
+.search-category:focus {
+    outline: 1px solid #019345;
+    background-color: #fff
+}
+
+.shop-scroll {
+    padding-right: 10px !important;
+    overflow: auto;
+    height: 200px;
+}
+
+/* product */
+.recently h1 {
+    text-align: center;
+}
+
+.recently-product-item>div {
+    border-radius: 8px;
+    border: none;
+    cursor: pointer;
+    border: 1px solid #fff;
+    transition: 0.3s;
+}
+
+.recently-product-item>div:hover {
+    border: 1px solid #119744;
+    box-shadow: 0px 8px 15px 0px rgb(0 0 0 / 10%);
+
+}
+
+.recently-product-item>div {
+    border-radius: 8px;
+    border: none;
+    cursor: pointer;
+    border: 1px solid #fff;
+    transition: 0.3s;
+}
+
+.recently-product-item>div:hover {
+    border: 1px solid #119744;
+    box-shadow: 0px 8px 15px 0px rgb(0 0 0 / 10%);
+
+}
+
+.product-image {
+    height: 200px;
+    overflow: hidden;
+}
+
+.product-image {
+    position: relative;
+}
+
+.top-card-product>div {
+    position: absolute
+}
+
+.top-card-product .top-left-product {
+    top: 10px;
+    left: 0px
+}
+
+.top-card-product .top-right-product {
+    top: 0px;
+    right: 0px
+}
+
+.top-left-product span {
+    font-size: 18px;
+    font-weight: 500;
+    padding: 4px 10px;
+    background-color: #e86121;
+    color: #fff;
+    border-radius: 4px
+}
+
+.top-right-product {
+    font-size: 22px;
+    color: #ccc;
+}
+
+.product-content {
+    padding-top: 12px;
+    text-align: center;
+    border-top: 1px solid #ddd;
+    font-family: 'Rubik', sans-serif;
+}
+
+.product-content .card-title {
+    padding-top: 10px;
+    line-height: 30px;
+    text-transform: capitalize;
+    margin: 0;
+    display: -webkit-box;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    -webkit-line-clamp: 1;
+    -webkit-box-orient: vertical;
+}
+
+.product-content .product-price {
+    font-size: 19px;
+    font-weight: 600;
+    color: #119342;
+}
+
+.product-content .price {
+    color: red;
+    text-decoration: line-through;
+}
+
+.product-rating {
+    justify-content: center;
+}
+
+.product-rating i {
+    color: #ffab10;
+    margin-right: 4px;
+}
+
+.product-rating i:last-child {
+    color: #000;
+}
+
+.product-price {
+    padding: 8px 0;
+}
+
+.product-price span:last-child {
+    font-size: 16px;
+    font-weight: 500
+}
+
+.btn-add {
+    padding: 8px;
+    border-radius: 6px;
+    background-color: #e8e8e8;
+    border: none;
+    color: #000;
+    font-size: 16px;
+    justify-content: center;
+    align-self: flex-start;
+    text-decoration: none;
+    transition: 0.5s;
+}
+
+.recently-product-item>div:hover .btn-add {
+    background-color: #119342;
+    color: #fff;
+
+}
+
+.btn-add i {
+    font-size: 13px;
+    margin-right: 6px;
+}
+
+.btn-show {
+    text-align: center;
+    justify-content: center;
+    margin-top: 60px !important;
+}
+
+.btn-show a {
+    border: 1px solid #119342;
+    padding: 10px 20px;
+    border-radius: 6px;
+    background-color: #fff;
+    color: #119342;
+    font-weight: 600;
+    text-transform: uppercase;
+    font-size: 14px;
+    font-family: 'Rubik', sans-serif;
+    cursor: pointer;
+
+}
+
+.btn-show a:hover {
+    color: #fff;
+    background-color: #119342;
+}
+
+.shop-widget-content label {
+    font-family: 'Rubik', sans-serif;
+    text-transform: capitalize
+}
+
+.btn-search {
+    border-radius: 10px;
+    overflow: hidden;
+    border: 2px solid #119342
+}
+
+.page {
+    color: #fff !important;
+    background-color: #119342 !important;
+}
+
+@import url('https://fonts.googleapis.com/css2?family=Rubik:wght@300&display=swap');
+
+@media screen and (min-width:1400px) {
+    .shop-part>div {
+        max-width: 1320px;
+        margin: 0 auto;
+    }
+}
+
+@media screen and (max-width:992px) {
+    .order-flex {
+        order: 1;
+    }
+
+    .shop-widget-promo {
+        width: 60%;
+        margin: 0 auto;
+    }
+
+}
+
+@media screen and (max-width:576px) {
+    .shop-widget-promo {
+        width: 100%;
+        margin: 0 auto;
+    }
+}

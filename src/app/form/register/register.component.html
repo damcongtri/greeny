@@ -1,0 +1,81 @@
+<div style="background-color: #f5f6f7;">
+    <div class="login text-center">
+        <h2>Join Now!</h2>
+        <h5 class="mb-4">Setup A New Account In A Minute</h5>
+        <div class="form-login mt-4">
+            <div class="sn w-100 ">
+                <ul>
+                    <li class=""><a class="d-flex fb"><i class="fa-brands fa-facebook-f"></i> Join with
+                            facebook</a>
+                    </li>
+                    <li><a class="d-flex tw"><i class="fa-brands fa-twitter"></i> Join with twitter</a>
+                    </li>
+                    <li><a class="d-flex gg"><i class="fa-brands fa-google"></i> Join with google</a></li>
+                    <li><a class="d-flex in"><i class="fa-brands fa-instagram"></i> Join with
+                            instagram</a>
+                    </li>
+                </ul>
+            </div>
+            <div class="line">
+                <span><i>or</i></span>
+            </div>
+            <div class="form w-100">
+                <form [formGroup]="formData" (ngSubmit)="submit()">
+                    <input formControlName="name" type="text" placeholder="Enter Your Name" class="w-100 ip-form">
+                    <div *ngIf="f.name.invalid && f.name.dirty" class="text-danger">
+                        <div *ngIf="f.name.errors.required" class="mb-2">Name cannot be empty</div>
+                        <div *ngIf="f.name.errors.minlength" class="mb-2">Name at least 3 characters</div>
+                    </div>
+                    <input formControlName="email" type="text" placeholder="Enter Your Email" class="w-100 ip-form">
+                    <div *ngIf="f.email.invalid && f.email.dirty" class="text-danger">
+                        <div *ngIf="f.email.errors.required" class="mb-2">Email cannot be empty</div>
+                        <div *ngIf="f.email.errors.email" class="mb-2">Email is not in correct format</div>
+                    </div>
+                    <div class="password">
+                        <input formControlName="password" type="password" id="pass" placeholder="Enter Your Password"
+                            class="w-100 ip-form">
+                        <i class="fa-solid fa-eye" id="password1" (click)="password('pass')"></i>
+                    </div>
+                    <div *ngIf="f.password.invalid && f.password.dirty" class="text-danger">
+                        <div *ngIf="f.password.errors.required" class="mb-2">Password cannot be empty</div>
+                        <div *ngIf="f.password.errors.minlength" class="mb-2">Password at least 3 characters</div>
+                    </div>
+                    <div class="password">
+                        <input [(ngModel)]="Repeat" id="repeat" [ngModelOptions]="{standalone: true}" type="pass"
+                            placeholder="Enter Repeat Password" class="w-100 ip-form">
+                        <i class="fa-solid fa-eye" id="password2" (click)="password('repeat')"></i>
+                    </div>
+
+                    <div class="text-danger"
+                        *ngIf="Repeat && this.formData.value.password && this.formData.value.password != Repeat">
+                        <p>Data does not match the password</p>
+                    </div>
+                    <div class=" input-group mb-3">
+                        <div class="custom-file ">
+                            <input type="file" class="custom-file-input" id="inputGroupFile04"
+                                aria-describedby="inputGroupFileAddon04" (change)="changeImg($event)">
+                            <label class="custom-file-label" for="inputGroupFile04">Choose file Avatar</label>
+                        </div>
+                    </div>
+                    <div class="avatar d-flex justify-content-start mb-4">
+                        <img [src]="avatar" alt="" style="max-width: 200px;max-height: 100px;">
+                    </div>
+                    <div class="form-check d-flex justify-content-start">
+                        <input type="checkbox" class="form-check-input check" id="exampleCheck1">
+                        <label class="pl-2 form-check-label" for="exampleCheck1"> Accept all the <a href=""> Terms &
+                                Conditions</a></label>
+                    </div>
+                    <button type="submit" [disabled]="!formData.valid" class="w-100 submit">Register</button>
+
+                </form>
+
+            </div>
+
+        </div>
+    </div>
+
+    <div class="login-bottom mt-4">
+        <p>Already Have An Account? <a routerLink="/form">Login Here</a></p>
+    </div>
+    <p class="text-by">Greeny | © Copyright by <a href="">Mironcoder</a></p>
+</div>

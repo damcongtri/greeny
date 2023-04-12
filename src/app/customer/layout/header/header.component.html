@@ -1,0 +1,262 @@
+<header (window:scroll)="onWindowScroll($event)">
+    <div class="header-top">
+        <div class="container">
+            <div class="row justify-sb align-items-ct">
+                <p class="col-lg-5 col-md-12">Welcome to Ecomart in Your Dream Online Store!</p>
+                <div class="header-top-select d-flex col-lg-3 col-md-6 ">
+                    <div class="header-select d-flex align-items-ct">
+                        <i class="fa-solid fa-earth-asia"></i>
+                        <select name="select" id="" class="">
+                            <option value="english" selected>English</option>
+                            <option value="vietnamese">Tiếng Việt</option>
+
+                        </select>
+
+                    </div>
+                    <div class="header-select d-flex align-items-ct">
+                        <i class="fa-solid fa-sack-dollar"></i>
+                        <select name="select" id="" class="">
+                            <option value="english" selected>Doller</option>
+                            <option value="vietnamese">Đồng</option>
+
+                        </select>
+
+                    </div>
+                </div>
+                <div class=" col-lg-4 col-md-6 header-top-list d-flex align-items-ct">
+                    <ul class="  ">
+                        <li>Offers</li>
+                        <li>Need Help</li>
+                        <li>Contact Us</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="header-main" id="sticky">
+        <div class="container">
+            <div class="d-flex align-items-ct justify-sb flex-wrap">
+                <div class="header-main-left d-flex align-items-ct justify-sb">
+                    <div class="logo" routerLink="" style="cursor: pointer;">
+                        <img src="/assets/images/header/logo.png" height="45px" alt="">
+                    </div>
+                    <div class="user d-flex align-items-ct">
+                        <div class="user-logo">
+                            <img *ngIf="!user" src="/assets/images/header/user.png" alt="">
+                            <img *ngIf="user" src="{{user.image}}" alt="">
+                        </div>
+                        <div class="nameUser" *ngIf="!user">
+                            <p class="user-name ml-2">Acccount <i class="fa-solid fa-caret-down"></i></p>
+                            <div class="log">
+                                <small class="d-block" routerLink="/form">Login</small>
+                                <small class="d-block" routerLink="/form/register">Register</small>
+                            </div>
+
+                        </div>
+                        <div class="nameUser" *ngIf="user">
+                            <p class="user-name ml-2">{{user.name}} <i class="fa-solid fa-caret-down"></i></p>
+                            <div class="log">
+                                <small class="d-block" (click)="logout()">Logout</small>
+                            </div>
+
+                        </div>
+                    </div>
+
+                    <div class="search-mobile d-none" (click)="showSearch()">
+                        <i class="fa-solid fa-magnifying-glass" id="icon-search"></i>
+                    </div>
+                </div>
+                <div class="header-main-mid col-xl-6 col-lg-6 col-md-4" id="search">
+                    <div class="form-group mb-0 form-search w-100">
+                        <input type="text" class="form-control input-search w-100" name="" id="search-sticky"
+                            aria-describedby="helpId" placeholder="Search Anything .... " [(ngModel)]="keyword">
+                        <i class="fa-solid fa-magnifying-glass icon-search"></i>
+
+                    </div>
+                    <div class="searchResult">
+                        <span *ngFor="let item of listSearch | searchFilter: keyword" (click)="clickSearch(item.id)"
+                            class="w-100">{{item.name}}</span>
+                    </div>
+                </div>
+                <div class="header-widget-group d-flex">
+                    <a href="" class="header-widget">
+                        <i class="fa-solid fa-heart">
+                            <p><small>0</small></p>
+                        </i>
+                    </a>
+                    <a style="cursor: pointer;" class="header-widget d-flex" (click)="cart()">
+                        <i class="fa-solid fa-basket-shopping">
+                            <p><small>{{length}}</small></p>
+                        </i>
+                        <span>Total Price <br><span class="header-price"> ${{this.total}}.00</span></span>
+
+                    </a>
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+    <div class="nav">
+        <div class="container-fluid">
+            <div class="header-navbar d-flex">
+                <div class="navbar-content d-flex justify-sb w-100 align-items-ct">
+                    <ul class="navlist d-flex">
+                        <li class="nav-item">
+                            <a href="" class="text-home">Home</a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="">Shop<i class="fa-solid fa-angle-down"></i></a>
+
+                            <div class="megamenu d-flex drop-down ">
+                                <div class="megamenu-list col-lg-3">
+                                    <h5>product page</h5>
+                                    <div class="line"></div>
+                                    <ul>
+                                        <li>name</li>
+                                        <li>name</li>
+                                        <li>name</li>
+                                        <li>name</li>
+                                        <li>name</li>
+                                        <li>name</li>
+                                    </ul>
+                                </div>
+                                <div class="megamenu-list col-lg-3">
+                                    <h5>product page</h5>
+                                    <div class="line"></div>
+                                    <ul>
+                                        <li>name</li>
+                                        <li>name</li>
+                                        <li>name</li>
+                                        <li>name</li>
+                                        <li>name</li>
+                                        <li>name</li>
+                                    </ul>
+                                </div>
+                                <div class="megamenu-list col-lg-3">
+                                    <h5>product page</h5>
+                                    <div class="line"></div>
+                                    <ul>
+                                        <li>name</li>
+                                        <li>name</li>
+                                        <li>name</li>
+                                        <li>name</li>
+                                        <li>name</li>
+                                        <li>name</li>
+                                    </ul>
+                                </div>
+                                <div class="megamenu-list col-lg-3">
+                                    <h5>product page</h5>
+                                    <div class="line"></div>
+                                    <ul>
+                                        <li>name</li>
+                                        <li>name</li>
+                                        <li>name</li>
+                                        <li>name</li>
+                                        <li>name</li>
+                                        <li>name</li>
+                                    </ul>
+                                </div>
+
+                            </div>
+
+                        </li>
+                        <li class="nav-item">
+                            <a href="">Category<i class="fa-solid fa-angle-down"></i></a>
+                            <div class="megamenu drop-down">
+                                <div class="megamenu-scroll  d-flex  flex-wrap">
+                                    <div class="megamenu-list width-20" *ngFor="let item of list">
+                                        <h5>{{item.name}}</h5>
+                                        <div class="line"></div>
+                                        <ul>
+                                            <li>name</li>
+                                            <li>name</li>
+                                            <li>name</li>
+                                            <li>name</li>
+                                            <li>name</li>
+                                            <li>name</li>
+                                        </ul>
+                                    </div>
+
+                                </div>
+                            </div>
+                        </li>
+                        <li class="nav-item position-r">
+                            <a href="">Page<i class="fa-solid fa-angle-down"></i></a>
+                            <ul class="menu-list">
+                                <li>name</li>
+                                <li>name</li>
+                                <li>name</li>
+                                <li>name</li>
+                                <li>name</li>
+                                <li>name</li>
+                                <li>name</li>
+                            </ul>
+                        </li>
+                        <li class="nav-item position-r">
+                            <a href="">Authentic<i class="fa-solid fa-angle-down"></i></a>
+                            <ul class="menu-list">
+                                <li>name</li>
+                                <li>name</li>
+                                <li>name</li>
+                                <li>name</li>
+                            </ul>
+                        </li>
+                        <li class="nav-item position-r">
+                            <a href="">Blog<i class="fa-solid fa-angle-down"></i></a>
+                            <ul class="menu-list">
+                                <li>name</li>
+                                <li>name</li>
+                                <li>name</li>
+                                <li>name</li>
+                            </ul>
+                        </li>
+                    </ul>
+                    <div class="navbar-info-group d-flex">
+                        <div class="navbar-info d-flex ">
+                            <i class="fa-solid fa-mobile-screen-button"></i>
+                            <p>
+                                <small class="d-block">Call Us</small>
+                                <span>(+880) 183 8288 389</span>
+                            </p>
+                        </div>
+                        <div class="navbar-info d-flex align-items-ct">
+                            <i class="fa-solid fa-at"></i>
+                            <p>
+                                <small class="d-block">Email Us</small>
+                                <span>support@example.com</span>
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="navbar-mobile d-flex">
+        <div class="nav-item-mobile" routerLink="">
+            <div class="icon-nav">
+                <i class="fa-solid fa-house-chimney"></i>
+            </div>
+            <p>Home</p>
+        </div>
+        <div class="nav-item-mobile" routerLink="products">
+            <div class="icon-nav">
+                <i class="fa-solid fa-list"></i>
+            </div>
+            <p>Category</p>
+        </div>
+        <div class="nav-item-mobile" routerLink="cart">
+            <div class="icon-nav">
+                <i class="fa-solid fa-basket-shopping"></i>
+            </div>
+            <p>CardsList</p>
+        </div>
+        <div class="nav-item-mobile">
+            <div class="icon-nav">
+                <i class="fa-solid fa-heart"></i>
+            </div>
+            <p>WishList</p>
+        </div>
+    </div>
+</header>

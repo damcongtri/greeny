@@ -1,0 +1,435 @@
+main {
+    padding-top: 50px;
+    background-color: #f5f6f7;
+}
+
+.align-items-ct {
+    align-items: center;
+
+}
+
+.flex-wrap {
+    flex-wrap: wrap;
+}
+
+.justify-content-sb {
+    justify-content: space-between;
+}
+
+.justify-content-ct {
+    justify-content: center;
+}
+
+.single-banner {
+    padding: 100px 0;
+    background-image: url(https://mironmahmud.com/greeny/assets/ltr/images/single-banner.jpg);
+    color: #fff;
+    text-align: center;
+    background-size: cover;
+
+}
+
+.breadcrumb {
+    background: none;
+}
+
+.breadcrumb-item span {
+    font-size: 20px;
+}
+
+.single-banner h2 {
+    text-transform: uppercase;
+    font-weight: 600;
+}
+
+.single-banner .breadcrumb .breadcrumb-item {
+    margin: 0 auto;
+}
+
+.cart {}
+
+.cart h3 {
+    font-size: 18px;
+    margin: 0;
+    padding-bottom: 20px;
+    position: relative;
+    border-bottom: 1px solid #ccc;
+    font-family: 'Rubik', sans-serif;
+    font-weight: 600;
+}
+
+.cart h3::before {
+    position: absolute;
+    content: "";
+    width: 50px;
+    height: 2px;
+    background-color: #119744;
+    bottom: -1px;
+}
+
+
+/* table */
+.header-table-cart {
+    /* padding: 20px 0; */
+    background-color: #fff;
+    padding: 30px 20px 0 30px;
+    border-radius: 10px;
+}
+
+.header-table-cart input {
+    margin-right: 10px;
+}
+
+.header-table-cart label {
+    margin: 0;
+    font-size: 19px;
+    font-weight: 500;
+}
+
+.header-table-cart span {
+    font-size: 19px;
+    font-weight: 500
+}
+
+.header-table-cart i {
+    color: #858585;
+    cursor: pointer;
+}
+
+/* product */
+
+.cart-product-bottom {
+    display: none !important;
+}
+
+.cart-product-content .product-price {
+    font-size: 15px;
+    font-weight: 500;
+    color: red;
+    display: none;
+}
+
+.cart-product-content .price {
+    color: #9b9b9b;
+    font-size: 13px;
+    text-decoration: line-through;
+
+}
+
+.product-price {}
+
+.product-price span:last-child {
+    font-size: 12px;
+    font-weight: normal;
+    color: #9b9b9b;
+}
+
+/* quantily */
+.quantily {
+    padding: 10px 0;
+    background-color: #fff;
+}
+
+.quantily span {
+    width: 30px;
+    height: 30px;
+    display: inline-block;
+    background-color: #f5f6f7;
+    cursor: pointer;
+    font-weight: 500;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 12px;
+    border-radius: 4px;
+}
+
+.quantily span:active {
+    background-color: #119744;
+    color: #fff;
+}
+
+.quantily-ip {
+    width: 50px;
+    border-radius: 0;
+    text-align: center;
+    border: 2px solid #f5f6f7;
+    margin: 0 4px;
+    outline-color: #119744;
+    font-weight: 500;
+    background-color: #f5f6f7;
+}
+
+.quantily-ip::-webkit-outer-spin-button,
+.quantily-ip::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+}
+
+.quantily-ip {
+    -moz-appearance: textfield;
+}
+
+/* product-mobile */
+.main-table-cart {
+    margin-top: 20px;
+    background-color: #fff;
+    padding: 30px 20px 20px 30px;
+    border-radius: 10px;
+}
+
+.main-table-cart #item-ip {
+    margin-right: 10px
+}
+
+.p-20 {
+    padding: 20px 0;
+}
+
+.table-product-item {}
+
+.cart-product-content .name-product {
+    display: -webkit-box;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+
+    color: rgb(36, 36, 36);
+    margin-bottom: 5px;
+    line-height: 20px;
+
+}
+
+
+/* price */
+.nav-form {
+    padding: 2px 2px 2px 10px;
+    background-color: #fff;
+    border: 1px solid #e8e8e8;
+    border-radius: 8px;
+    margin-bottom: 10px;
+    position: relative;
+}
+
+.nav-form::before {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 2px;
+    background-color: #119342;
+    bottom: -12px;
+}
+
+.nav-form input::placeholder {
+    font-weight: 500;
+    text-transform: capitalize;
+}
+
+.nav-form a {
+    padding: 8px 16px;
+    background-color: #119342;
+    color: #fff;
+    text-transform: uppercase;
+    font-family: 'Rubik', sans-serif;
+    font-weight: 500;
+    font-size: 12px;
+    border-radius: 8px;
+    text-decoration: none;
+}
+
+.nav-form input {
+    padding: 5px;
+    border: none;
+    outline: none
+}
+
+.nav-form input::placeholder {
+    font-size: 12px;
+}
+
+.cart-total {
+    background-color: #fff;
+}
+
+.cart-total-content {
+    margin: 0 auto;
+    max-width: 500px
+}
+
+
+.cart-table-total ul {
+    padding: 0;
+    width: 100%;
+}
+
+.cart-table-total ul li {
+    border-bottom: 1px solid #e8e8e8;
+    padding: 15px;
+    list-style-type: none;
+    display: flex;
+    justify-content: space-between;
+    font-weight: 500;
+    font-size: 15px;
+}
+
+.cart-table-total ul li:last-child {
+    border: 0;
+    color: #119744;
+
+}
+
+.account-card {
+    background-color: #fff;
+    margin-top: 20px;
+    padding: 20px 30px 30px 30px;
+}
+
+.profile-card {
+    margin-top: 20px;
+    padding: 25px;
+    background-color: #f5f5f5;
+    border-radius: 12px;
+
+}
+
+.profile-card h5,
+.profile-card p {
+    font-family: 'Rubik', sans-serif;
+}
+
+.account-card .add-btn {
+    padding: 10px 15px;
+    background-color: #ddffd5;
+    color: #119342;
+    border-radius: 8px;
+    cursor: pointer;
+}
+
+.table-mobile {
+    display: none !important
+}
+
+.table-pc .product-price {
+    font-size: 15px;
+    font-weight: 500;
+    color: red;
+
+}
+
+.table-pc .price {
+    color: #9b9b9b;
+    font-size: 13px;
+    text-decoration: line-through;
+}
+
+.total-pro {
+    color: #119744;
+    font-weight: 600
+}
+
+i.fa-trash-can {
+    color: #9b9b9b;
+    cursor: pointer;
+}
+
+.rules {
+    padding: 0 15px;
+    margin: 40px 0;
+}
+
+.rules input {
+    margin-right: 10px;
+}
+
+.rules-btn {
+    text-align: center;
+}
+
+.rules .rules-btn button:hover {
+    background-color: #fff;
+    color: #119744;
+}
+
+.rules .rules-btn button {
+    width: 100%;
+    padding: 15px 20px;
+    border: none;
+    border-radius: 5px;
+    text-transform: uppercase;
+    font-size: 14px;
+    font-weight: 600;
+    background-color: #119744;
+    color: #fff;
+    font-family: 'Rubik', sans-serif;
+    margin-top: 16px;
+    border: 2px solid #119744;
+    transition: 0.2s
+}
+
+.phone label {
+    font-weight: 500;
+}
+
+.phone input {
+    padding: 8px 20px;
+    border: 1px solid #119744;
+    border-radius: 5px;
+    outline-color: #119744;
+    background-color: #f5f5f5;
+    transition: 0.3s;
+}
+
+.phone input:focus {
+    background-color: #fff;
+}
+
+.bg-active {
+    border: 1px solid #119342;
+    background-color: #ddffd5;
+}
+
+
+@import url('https://fonts.googleapis.com/css2?family=Rubik:wght@300&display=swap');
+
+@media screen and (min-width:1400px) {
+
+    main>div {
+        max-width: 1320px;
+        margin: 0 auto;
+    }
+
+
+}
+
+@media screen and (max-width:992px) {
+    .table-pc {
+        display: none !important;
+    }
+
+    .header-table-cart .cart-price {
+        display: flex;
+        justify-content: flex-end;
+    }
+
+    .cart-product-bottom {
+        display: block !important;
+    }
+
+    .cart-product-content .product-price {
+
+        display: block;
+    }
+
+    .table-mobile {
+        display: flex !important
+    }
+
+    .table-product-item {
+        margin-top: 16px;
+    }
+}
+
+#click1 h5,
+p {
+    cursor: pointer;
+}

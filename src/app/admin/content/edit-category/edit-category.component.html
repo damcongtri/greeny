@@ -1,0 +1,35 @@
+<div class="container">
+    <div class="header d-flex justify-content-sb">
+        <h3>Edit Category</h3>
+        <button type="button" class="btn btn-success text-light m-2 "
+            style="text-transform: capitalize;font-size: 18px;" routerLink="/admin/category"><i
+                class="fa-solid fa-rotate-left"></i> Back To List
+        </button>
+    </div>
+    <form action="" [formGroup]="formData">
+        <div class="input-item mb-3">
+            <label for="" class="d-block mb-1">Name Product</label>
+            <input type="text" class="ip-addProduct  w-100 p-2" formControlName="name">
+            <div *ngIf="f.name.invalid &&( f.name.dirty || f.name.touched )" class="text-danger">
+                <div *ngIf="f.name.errors.required">Name cannot be empty</div>
+            </div>
+        </div>
+        <div class="input-item mb-3">
+            <div class="input-group">
+                <label for="" class="d-block w-100">Image </label>
+                <div class="custom-file">
+                    <input type="file" class="custom-file-input" id="inputGroupFile04" (change)="changeImg($event)">
+                    <label class="custom-file-label" for="inputGroupFile04">Choose file</label>
+                </div>
+            </div>
+            <div *ngIf="checkImg" class="text-danger">
+                <div>Image cannot be empty</div>
+            </div>
+            <img src="{{imageMain}}" alt="" style="max-width: 50%; max-height: 200px;">
+        </div>
+        <div class="submit text-center" style="margin-bottom: 100px;">
+            <button type="submit" (click)="submitForm()" [disabled]="!formData.valid" style=" font-weight: 600;"
+                class="btn btn-success w-100 p-2">Update Category</button>
+        </div>
+    </form>
+</div>

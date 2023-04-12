@@ -1,0 +1,57 @@
+<div style="background-color: #f5f6f7;">
+    <div class="login text-center">
+        <h2>Welcome!</h2>
+        <h5>Use Your Credentials To Access</h5>
+        <div class="form-login mt-4">
+            <div class="sn w-100 ">
+                <ul>
+                    <li class=""><a class="d-flex fb"><i class="fa-brands fa-facebook-f"></i> login with
+                            facebook</a>
+                    </li>
+                    <li><a class="d-flex tw"><i class="fa-brands fa-twitter"></i> login with twitter</a>
+                    </li>
+                    <li><a class="d-flex gg"><i class="fa-brands fa-google"></i> login with google</a></li>
+                    <li><a class="d-flex in"><i class="fa-brands fa-instagram"></i> login with
+                            instagram</a>
+                    </li>
+                </ul>
+            </div>
+            <div class="line">
+                <span><i>or</i></span>
+            </div>
+            <div class="form w-100">
+                <form (ngSubmit)="submit()" [formGroup]="formData">
+                    <input formControlName="email" type="text" placeholder="Enter Your Email" class="w-100 ip-form">
+                    <div *ngIf="f.email.invalid && f.email.dirty" class="text-danger">
+                        <div *ngIf="f.email.errors.required" class="mb-2">Email cannot be empty</div>
+                        <div *ngIf="f.email.errors.email" class="mb-2">Email is not in correct format</div>
+                    </div>
+                    <div class="password">
+                        <input formControlName="password" type="password" id="pass" placeholder="Enter Your Password"
+                            class="w-100 ip-form">
+                        <i class="fa-solid fa-eye" id="password1" (click)="password('pass')"></i>
+                    </div>
+                    <div *ngIf="f.password.invalid && f.password.dirty" class="text-danger">
+                        <div *ngIf="f.password.errors.required" class="mb-2">Password cannot be empty</div>
+                        <div *ngIf="f.password.errors.minlength" class="mb-2">Password at least 3 characters</div>
+                    </div>
+                    <div class="form-check d-flex justify-content-start">
+                        <input type="checkbox" class="form-check-input check" id="exampleCheck1">
+                        <label class="pl-2 form-check-label" for="exampleCheck1"> Remember Me</label>
+                    </div>
+                    <button type="submit" [disabled]="!formData.valid" class="w-100 submit">Login</button>
+                    <div class="forgot">
+                        <p>Forgot Your Password? <a href="form">Reset Here</a></p>
+                    </div>
+                </form>
+            </div>
+
+        </div>
+
+    </div>
+
+    <div class="login-bottom mt-4">
+        <p>Don't Have Any Account? <a routerLink="/form/register">Register Here</a></p>
+    </div>
+    <p class="text-by">Greeny | © Copyright by <a href="">Mironcoder</a></p>
+</div>

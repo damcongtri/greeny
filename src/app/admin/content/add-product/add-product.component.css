@@ -1,0 +1,12 @@
+.justify-content-sb {
+    justify-content: space-between;
+
+}
+
+.wrap {
+    flex-wrap: wrap;
+}
+
+.input-item {
+    font-size: 18px;
+}

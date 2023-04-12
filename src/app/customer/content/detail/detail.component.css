@@ -1,0 +1,617 @@
+main {
+    padding-top: 50px;
+    background-color: #f5f6f7;
+}
+
+.align-items-ct {
+    align-items: center;
+
+}
+
+.justify-content-ct {
+    justify-content: center;
+}
+
+.single-banner {
+    padding: 100px 0;
+    background-image: url(https://mironmahmud.com/greeny/assets/ltr/images/single-banner.jpg);
+    color: #fff;
+    text-align: center;
+    background-size: cover;
+
+}
+
+.breadcrumb {
+    background: none;
+}
+
+.breadcrumb-item span {
+    font-size: 20px;
+}
+
+.single-banner h2 {
+    text-transform: uppercase;
+    font-weight: 600;
+}
+
+.single-banner .breadcrumb .breadcrumb-item {
+    margin: 0 auto;
+}
+
+
+/* image product */
+.detail-product {}
+
+.detail-image-list {
+    margin: 10px 0;
+}
+
+.detail-image-main img {
+    border-radius: 10px;
+}
+
+.detail-product-item {
+    border-radius: 6px;
+}
+
+.img-list {
+    border-radius: 10px;
+    overflow: hidden;
+    width: 100%;
+    /* height: 100%; */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.img-list:focus {
+    border: 1px solid #119744;
+}
+
+.img-list img {
+    width: 100%;
+}
+
+/* content */
+.details-content {
+    padding: 30px;
+    background-color: #fff;
+    border-radius: 10px;
+}
+
+.details-name h3 {
+    text-transform: capitalize;
+    font-size: 26px;
+    font-weight: 600;
+    letter-spacing: 1px;
+    font-family: 'Rubik', sans-serif;
+    transition: 0.3s;
+}
+
+.details-name h3:hover {
+    color: #119744;
+    cursor: pointer;
+}
+
+.details-meta {
+    text-transform: uppercase;
+    font-size: 13px;
+}
+
+.details-meta p:first-child {
+    margin-right: 20px;
+}
+
+.details-desc {
+    font-family: 'Rubik', sans-serif;
+}
+
+/* rating */
+.star-rating i {
+    margin-right: 6px;
+    font-size: 13px;
+    color: #ffab10;
+}
+
+.details-rating {
+    margin-bottom: 15px;
+}
+
+.details-rating a {
+    color: gray;
+    font-family: 'Rubik', sans-serif;
+    transition: 0.3s;
+}
+
+.details-rating a:hover {
+    color: #119744;
+}
+
+/* price */
+.details-price {
+    font-size: 22px;
+    font-weight: 600;
+    color: #119744;
+    font-family: 'Rubik', sans-serif;
+    margin-bottom: 15px;
+
+}
+
+.details-price span:first-child {
+    color: red;
+    text-decoration: line-through;
+    margin-right: 12px;
+}
+
+.details-price span small {
+    font-size: 14px;
+}
+
+/* quantily */
+.quantily {
+    padding: 10px 0;
+    background-color: #fff;
+}
+
+.quantily span {
+    width: 30px;
+    height: 30px;
+    display: inline-block;
+    background-color: #f5f6f7;
+    cursor: pointer;
+    font-weight: 500;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 12px;
+    border-radius: 4px;
+}
+
+.quantily span:active {
+    background-color: #119744;
+    color: #fff;
+}
+
+.quantily-ip {
+    width: 50px;
+    border-radius: 0;
+    text-align: center;
+    border: 2px solid #f5f6f7;
+    margin: 0 4px;
+    outline-color: #119744;
+    font-weight: 500;
+    background-color: #f5f6f7;
+}
+
+.quantily-ip::-webkit-outer-spin-button,
+.quantily-ip::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+}
+
+.quantily-ip {
+    -moz-appearance: textfield;
+}
+
+/* tag and share*/
+.details-list-group {
+    margin-bottom: 20px;
+}
+
+.details-list-group ul {
+    padding: 0;
+    margin: 0;
+}
+
+.details-list-group h4 {
+    font-size: 16px;
+    margin-right: 12px;
+    margin-bottom: 0;
+}
+
+.details-tag-list li {
+    padding: 4px 10px;
+    border-radius: 6px;
+    font-weight: 500;
+    margin-right: 10px;
+    color: rgb(97, 97, 97);
+}
+
+
+
+.details-list-group ul li {
+    list-style-type: none;
+
+    transition: 0.3s;
+}
+
+.details-tag-list li:hover,
+.details-share-list .share-icon:hover {
+    background-color: #119744 !important;
+    color: #fff !important;
+    cursor: pointer;
+}
+
+.share-icon {
+    width: 35px;
+    height: 35px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-right: 10px;
+    background-color: #f5f6f7;
+    border-radius: 50%;
+    color: rgb(97, 97, 97);
+}
+
+.share-icon i {
+    font-size: 14px;
+}
+
+/* btn */
+.details-btn button {
+    border: none;
+    width: 100%;
+    padding: 12px 0;
+    border-radius: 10px;
+    text-transform: uppercase;
+    font-family: 'Rubik', sans-serif;
+    background-color: #119744;
+    color: #fff;
+}
+
+.details-btn button:focus {
+    outline: none;
+}
+
+.details-btn button:hover {
+    background-color: #108d40
+}
+
+
+/* detail-nav */
+.details-nav {
+    padding-top: 100px;
+}
+
+.details-nav-tabs {
+    border-radius: 10px;
+    padding: 30px;
+    background-color: #fff;
+}
+
+.show-tab {
+    color: #119744;
+}
+
+.details-nav-tabs h3 {
+    padding: 0 30px;
+    margin: 10px 0 !important;
+    border-right: 1px solid #ccc;
+    text-transform: uppercase;
+    font-size: 17px;
+    font-weight: 600;
+    font-family: 'Rubik', sans-serif;
+    cursor: pointer;
+    transition: 0.1s;
+    margin: 0;
+}
+
+
+.details-nav-tabs h3:hover {
+    color: #119744;
+}
+
+.details-nav-tabs h3:last-child {
+    border: none
+}
+
+.details-nav-item {
+    margin-top: 30px;
+    padding: 50px;
+    background-color: #fff;
+    border-radius: 10px;
+}
+
+.descriptions-video {
+    position: relative;
+}
+
+.descriptions-video .play-video {
+    width: 80px;
+    height: 80px;
+    display: inline-block;
+    background-color: #0fc756cc;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: #fff;
+    font-size: 22px;
+    cursor: pointer;
+}
+
+.nav-content {
+    display: none;
+    opacity: 0;
+    transition: 10s;
+}
+
+.show-content {
+    display: block !important;
+    opacity: 1;
+}
+
+/* nav-specifications */
+.nav-specifications table {
+    width: 100%;
+}
+
+.nav-specifications tbody {
+    border: 1px solid #ccc;
+    border-right: 0px;
+}
+
+.nav-specifications tbody tr {
+    width: 100%;
+}
+
+.nav-specifications tr th,
+.nav-specifications tr td {
+    width: 50%;
+    padding: 15px 25px;
+    border-bottom: 1px solid #ccc;
+    border-right: 1px solid #ccc;
+}
+
+/* https://codepen.io/hesguru/pen/BaybqXv */
+.rate {
+    float: left;
+    height: 46px;
+    padding: 0 10px;
+}
+
+.rate:not(:checked)>input {
+    position: absolute;
+    top: -9999px;
+}
+
+.rate:not(:checked)>label {
+    float: right;
+    width: 1em;
+    overflow: hidden;
+    white-space: nowrap;
+    cursor: pointer;
+    font-size: 30px;
+    color: #ccc;
+}
+
+.rate:not(:checked)>label:before {
+    content: '★ ';
+}
+
+.rate>input:checked~label {
+    color: #ffc700;
+}
+
+.rate:not(:checked)>label:hover,
+.rate:not(:checked)>label:hover~label {
+    color: #deb217;
+}
+
+.rate>input:checked+label:hover,
+.rate>input:checked+label:hover~label,
+.rate>input:checked~label:hover,
+.rate>input:checked~label:hover~label,
+.rate>label:hover~input:checked~label {
+    color: #c59b08;
+}
+
+
+.rating_bar {
+    text-align: center;
+}
+
+
+/* comment */
+
+/* related */
+.related {
+    padding-top: 100px;
+}
+
+.recently h1 {
+    text-align: center;
+}
+
+.recently-product-item>div {
+    border-radius: 8px;
+    border: none;
+    cursor: pointer;
+    border: 1px solid #fff;
+    transition: 0.3s;
+}
+
+.recently-product-item>div:hover {
+    border: 1px solid #119744;
+    box-shadow: 0px 8px 15px 0px rgb(0 0 0 / 10%);
+
+}
+
+.recently-product-item>div {
+    border-radius: 8px;
+    border: none;
+    cursor: pointer;
+    border: 1px solid #fff;
+    transition: 0.3s;
+}
+
+.recently-product-item>div:hover {
+    border: 1px solid #119744;
+    box-shadow: 0px 8px 15px 0px rgb(0 0 0 / 10%);
+
+}
+
+.product-image {
+    height: 256px;
+    overflow: hidden;
+}
+
+.product-image {
+    position: relative;
+}
+
+.top-card-product>div {
+    position: absolute
+}
+
+.top-card-product .top-left-product {
+    top: 10px;
+    left: 0px
+}
+
+.top-card-product .top-right-product {
+    top: 0px;
+    right: 0px
+}
+
+.top-left-product span {
+    font-size: 18px;
+    font-weight: 500;
+    padding: 4px 10px;
+    background-color: #e86121;
+    color: #fff;
+    border-radius: 4px
+}
+
+.top-right-product {
+    font-size: 22px;
+    color: #ccc;
+}
+
+.product-content {
+    padding-top: 12px;
+    text-align: center;
+    border-top: 1px solid #ddd;
+    font-family: 'Rubik', sans-serif;
+}
+
+.product-content .card-title {
+    padding: 10px 0;
+    text-transform: capitalize;
+    margin: 0;
+}
+
+.product-content .product-price {
+    font-size: 19px;
+    font-weight: 600;
+    color: #119342;
+}
+
+.product-content .price {
+    color: red;
+    text-decoration: line-through;
+}
+
+.product-rating {
+    justify-content: center;
+}
+
+.product-rating i {
+    color: #ffab10;
+    margin-right: 4px;
+}
+
+.product-rating i:last-child {
+    color: #000;
+}
+
+.product-price {
+    padding: 8px 0;
+}
+
+.product-price span:last-child {
+    font-size: 16px;
+    font-weight: 500
+}
+
+.btn-add {
+    padding: 8px;
+    border-radius: 6px;
+    background-color: #e8e8e8;
+    border: none;
+    color: #000;
+    font-size: 16px;
+    justify-content: center;
+    align-self: flex-start;
+    text-decoration: none;
+    transition: 0.5s;
+}
+
+.recently-product-item>div:hover .btn-add {
+    background-color: #119342;
+    color: #fff;
+
+}
+
+.btn-add i {
+    font-size: 13px;
+    margin-right: 6px;
+}
+
+.btn-show {
+    text-align: center;
+    justify-content: center;
+    margin-top: 60px !important;
+}
+
+.btn-show a {
+    border: 1px solid #119342;
+    padding: 10px 20px;
+    border-radius: 6px;
+    background-color: #fff;
+    color: #119342;
+    font-weight: 600;
+    text-transform: uppercase;
+    font-size: 14px;
+    font-family: 'Rubik', sans-serif;
+    cursor: pointer;
+
+}
+
+.btn-show a:hover {
+    color: #fff;
+    background-color: #119342;
+}
+
+.show-child {
+    margin-top: 10px;
+    margin-right: -10px;
+}
+.show-child>div{
+ padding-right: 10px
+}
+
+@import url('https://fonts.googleapis.com/css2?family=Rubik:wght@300&display=swap');
+
+@media screen and (min-width:1400px) {
+
+    main>div {
+        max-width: 1320px;
+        margin: 0 auto;
+    }
+
+    .single-banner {}
+}
+
+@media screen and (max-width:768px) {
+    .details-nav-tabs h3 {
+        display: block;
+        width: 100%;
+    }
+
+
+}

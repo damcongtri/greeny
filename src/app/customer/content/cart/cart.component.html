@@ -1,0 +1,254 @@
+<div class="single-banner">
+    <h2>Checkout</h2>
+    <div class="breadcrumb bg-fff">
+        <div class="breadcrumb-item">
+            <span>Home</span> / <a class="location">Checkout</a>
+        </div>
+    </div>
+</div>
+<main>
+    <div class="cart">
+        <div class="header-table-cart">
+            <h3>Your Order</h3>
+            <div class="p-20 d-flex justify-content-sb align-items-ct">
+                <div class="col-lg-5">
+                    <form action="">
+                        <input type="checkbox" (click)="allCheck()" name="" id="all-ip"><label for="all-ip">All (
+                            {{list.length}}
+                            products)</label>
+                    </form>
+                </div>
+                <div class="col-lg-7 d-flex ">
+                    <div class="col-lg-5 table-pc">
+                        <span>Price</span>
+                    </div>
+                    <div class="col-lg-3 table-pc">
+                        <span>Quantity</span>
+                    </div>
+                    <div class="cart-price col-lg-4 d-flex justify-content-sb align-items-ct">
+                        <span class="table-pc">Into money</span>
+                        <i (click)="removeAll()" class="fa-solid fa-trash-can"></i>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="main-table-cart">
+            <div class="table-product-item d-flex justify-content-sb align-items-ct" *ngFor="let item of list">
+                <div class="col-lg-5">
+                    <form action="" class="d-flex align-items-ct">
+                        <div class="d-flex align-items-ct" style="width: 30%;">
+                            <input type="checkbox" name="" id="item-ip{{item.id}}">
+                            <div class="cart-product-image" style="max-width: 100px;">
+                                <img src="{{item.image}}" alt="" class="card-img">
+                            </div>
+                        </div>
+                        <div class="cart-product-content " style="width: 70%;">
+                            <h5 class="name-product">
+                                {{item.name}}
+                            </h5>
+                            <h6 class="product-price">
+                                <span class="price">${{item.price}}</span>
+                                ${{item.sale_price}} <span style="font-weight: 500;">/piece</span>
+                            </h6>
+                            <div class="d-flex justify-content-sb align-items-ct table-mobile">
+                                <form action="" class="d-flex align-items-ct">
+                                    <span (click)="mark('-',item.id)"><i class="fa-solid fa-minus"></i></span>
+                                    <input type="number" id="quantily{{item.id}}" class="quantily-ip"
+                                        value="{{item.quantily}}">
+                                    <span (click)="mark('+', item.id)"><i class="fa-solid fa-plus"></i></span>
+                                </form>
+
+                                <span (click)="deleteProduct(item.id)">Delete</span>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+                <div class="col-lg-7 d-flex table-pc">
+                    <div class="col-lg-5 d-flex align-items-ct">
+                        <h6 class="product-price">
+                            <span class="price">${{item.price}}</span>
+                            ${{item.sale_price}} <span style="font-weight: 500;">/piece</span>
+                        </h6>
+                    </div>
+                    <div class="col-lg-3">
+                        <div class=" quantily ">
+                            <form action="" class="d-flex align-items-ct">
+                                <span (click)="markPc('-',item.id)"><i class="fa-solid fa-minus"></i></span>
+                                <input type="number" id="quantilyPc{{item.id}}" class="quantily-ip"
+                                    value="{{item.quantily}}">
+                                <span (click)="markPc('+',item.id)"><i class="fa-solid fa-plus"></i></span>
+                            </form>
+                        </div>
+                    </div>
+                    <div class="col-lg-4 d-flex justify-content-sb align-items-ct">
+                        <span class="total-pro">{{item.sale_price*item.quantily}}$</span>
+                        <i (click)="deleteProduct(item.id)" class="fa-solid fa-trash-can"></i>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="cart-total">
+            <div class="cart-total-content">
+                <div class="nav-form d-flex justify-content-sb">
+                    <input type="text" class="col-lg-8 w-100" placeholder="Enter your coupon code"
+                        [(ngModel)]="voucher">
+                    <a class="" (click)="Checkvoucher()" style="cursor: pointer;">APPLY</a>
+                </div>
+                <div class="cart-table-total d-flex justify-content-sb">
+                    <ul>
+                        <li>
+                            <span> Sub Total</span>
+                            <span>${{total}}</span>
+                        </li>
+                        <li>
+                            <span>Delivery Fee</span>
+                            <span>${{ship}}.00</span>
+                        </li>
+                        <li>
+                            <span>Discount</span>
+                            <span>$0.00</span>
+                        </li>
+                        <li>
+                            <span>Total(Incl. VAT)</span>
+                            <span>${{total+ship}}.00</span>
+                        </li>
+                    </ul>
+
+                </div>
+            </div>
+        </div>
+        <div class="schedule account-card">
+            <h3>Delivery Schedule</h3>
+            <div id="schedule" class="cart-tabs d-flex flex-wrap">
+                <div class="col-lg-4 col-md-4  col-sm-12">
+                    <div id="click1" (click)="idCheck = 1" [class.bg-active]="idCheck ==1 " class="profile-card tabs1">
+                        <a>
+                            <h5 style="z-index: -1000">Express</h5>
+                            <p class="m-0">90 Min Express Delivery</p>
+                        </a>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-4  col-sm-12 ">
+                    <div id="click2" (click)="idCheck = 2" [class.bg-active]="idCheck ==2 " class="profile-card tabs1">
+                        <h5>8am-10pm</h5>
+                        <p class="m-0">8.00 AM - 10.00 PM</p>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-4  col-sm-12 ">
+                    <div id="click3" (click)="idCheck = 3" [class.bg-active]="idCheck ==3 " class="profile-card tabs1">
+                        <h5>Next Day</h5>
+                        <p class="m-0">Next Day Or Tomorrow</p>
+                    </div>
+                </div>
+
+
+            </div>
+        </div>
+        <div class="schedule account-card">
+
+            <h3 class="d-flex justify-content-sb align-items-ct"><span>Contact Number</span> <span data-toggle="modal"
+                    data-target="#exampleModal" class="add-btn">Add
+                    Contact</span></h3>
+            <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
+                aria-hidden="true">
+                <div class="modal-dialog" role="document">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <h5 class="modal-title" id="exampleModalLabel">Modal title</h5>
+                            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                <span aria-hidden="true">&times;</span>
+                            </button>
+                        </div>
+                        <form action="">
+                            <div class="modal-body">
+                                <div class="input-group mb-3">
+                                    <select class="custom-select" id="inputGroupSelect02">
+
+                                        <option value="primary" selected>Primary</option>
+                                        <option value="secondary">Secondary</option>
+                                    </select>
+                                    <div class="input-group-append">
+                                        <label class="input-group-text" for="inputGroupSelect02">Choose Title</label>
+                                    </div>
+                                </div>
+                                <div class="phone">
+                                    <label for="phone">Phone Number</label>
+                                    <input type="text" placeholder="Enter Your Number" id="phone" class="w-100">
+                                </div>
+                            </div>
+                            <div class="modal-footer">
+                                <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                                <button type="button" class="btn btn-primary">Save</button>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+            <div class="cart-tabs d-flex flex-wrap">
+                <div class="col-lg-4 col-md-4  col-sm-12">
+                    <div class="profile-card " (click)="idPhone = 1" [class.bg-active]="idPhone ==1 ">
+                        <h5>Primary</h5>
+                        <p class="m-0">0954823571</p>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-4  col-sm-12 ">
+                    <div class="profile-card " (click)="idPhone = 2" [class.bg-active]="idPhone ==2 ">
+                        <h5>Secondary</h5>
+                        <p class="m-0">0826322934</p>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-4  col-sm-12 ">
+                    <div class="profile-card " (click)="idPhone = 3" [class.bg-active]="idPhone ==3 ">
+                        <h5>Primary</h5>
+                        <p class="m-0">0383859284</p>
+                    </div>
+                </div>
+
+
+            </div>
+        </div>
+        <div class="schedule account-card">
+
+            <h3 class="d-flex justify-content-sb align-items-ct"><span>Delivery Address</span> <span class="add-btn">Add
+                    Address</span></h3>
+
+            <div class="cart-tabs d-flex flex-wrap">
+                <div class="col-lg-4 col-md-4  col-sm-12 ">
+                    <div class="profile-card " (click)="idAR = 1" [class.bg-active]="idAR ==1 ">
+                        <h5>Home</h5>
+                        <p class="m-0">Jalkuri, Fatullah, Narayanganj-1420. Word No-09, Road No-17/A</p>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-4  col-sm-12 ">
+                    <div class="profile-card " (click)="idAR = 2" [class.bg-active]="idAR ==2 ">
+                        <h5>Office</h5>
+                        <p class="m-0">250 Hoàng Quốc Việt, Bắc Từ Liêm, Hà Nội.</p>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-4  col-sm-12 ">
+                    <div class="profile-card " (click)="idAR = 3" [class.bg-active]="idAR ==3 ">
+                        <h5>Home</h5>
+                        <p class="m-0">Bắc Ninh Việt Nam</p>
+                    </div>
+                </div>
+
+
+            </div>
+            <div class="rules">
+                <form action="">
+                    <input type="checkbox" id="check"><label for="check">By making this purchase you agree to our Terms
+                        and
+                        Conditions.</label>
+                    <div class="rules-btn">
+                        <button type="text" (click)="checkOut()">
+                            proced to checkout
+                        </button>
+                    </div>
+                </form>
+            </div>
+
+        </div>
+    </div>
+
+</main>

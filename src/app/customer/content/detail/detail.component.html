@@ -1,0 +1,320 @@
+<div class="single-banner">
+    <h2>Detail product</h2>
+    <div class="breadcrumb bg-fff">
+        <div class="breadcrumb-item">
+            <span>Home</span> / <a class="location">Detail</a>
+        </div>
+    </div>
+</div>
+<main>
+
+
+    <div class="detail-product">
+        <div class="container-fluid ">
+            <div class="row">
+                <div class="col-lg-6">
+                    <div class="details-gallery">
+                        <div class="detail-label-group">
+
+                        </div>
+                        <div class="detail-image-main">
+                            <img class="card-img" id="test-main" src="{{product.image}}" alt="">
+                        </div>
+                        <div class="detail-image-list">
+                            <owl-carousel-o [options]="customOptions" *ngIf="moreImage.length > 3">
+                                <ng-template carouselSlide style="border-radius: 10px;">
+                                    <div tabindex="1" class="img-list" (click)="changeimgMain()">
+                                        <img id="test-item" src="{{product.image}}" alt="">
+                                    </div>
+                                </ng-template>
+                                <ng-template carouselSlide style="border-radius: 10px;"
+                                    *ngFor="let item of moreImage, let i = index">
+                                    <div tabindex="1" class="img-list" (click)="changeimg(i)">
+                                        <img id="test-item{{i}}" src="{{item}}" alt="">
+                                    </div>
+                                </ng-template>
+                            </owl-carousel-o>
+                            <div class="show-child d-flex flex-wrap" *ngIf="moreImage.length <= 3">
+                                <div class="w-25">
+                                    <div tabindex="1" class="img-list " (click)="changeimgMain()">
+                                        <img id="test-item" src="{{product.image}}" alt="">
+                                    </div>
+                                </div>
+                                <div class="w-25" *ngFor="let item of moreImage, let i = index">
+                                    <div tabindex="1" class="img-list " (click)="changeimg(i)">
+                                        <img id="test-item{{i}}" src="{{item}}" alt="">
+                                    </div>
+                                </div>
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-6">
+                    <div class="details-content">
+                        <div class="details-name">
+                            <h3>{{product.name}}</h3>
+                        </div>
+                        <div class="details-meta d-flex">
+                            <p>sku: <span>123456</span></p>
+                            <p>brand: <span>trí</span></p>
+                        </div>
+                        <div class="details-rating d-flex align-items-ct">
+                            <div class="star-rating">
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                            </div>
+                            <a href="">(3 Reviews)</a>
+                        </div>
+                        <div class="details-price">
+                            <span>${{product.price}}.00</span> <span>${{product.sale_price}}.00<small>/Per
+                                    Kilo</small></span>
+                        </div>
+                        <p class="details-desc">
+                            Lorem ipsum dolor sit amet consectetur, adipisicing elit. Voluptates modi qui ea perferendis
+                            id
+                            ad dolores ipsam magni dolorem amet vero voluptatem aliquam iusto corporis odio sapiente in,
+                            maiores cupiditate.
+                        </p>
+                        <div class="details-list-group d-flex align-items-ct">
+                            <h4>Tag:</h4>
+                            <ul class="details-tag-list d-flex">
+                                <li>Organic</li>
+                                <li>Fruits</li>
+                                <li>Chilis</li>
+                            </ul>
+                        </div>
+                        <div class="details-list-group d-flex align-items-ct">
+                            <h4>Share:</h4>
+                            <ul class="details-share-list d-flex">
+                                <div class="share-icon">
+                                    <li><i class="fa-brands fa-facebook-f"></i></li>
+                                </div>
+                                <div class="share-icon">
+                                    <li><i class="fa-brands fa-twitter"></i></li>
+                                </div>
+                                <div class="share-icon">
+                                    <li><i class="fa-brands fa-linkedin-in"></i></li>
+                                </div>
+                                <div class="share-icon">
+                                    <li><i class="fa-brands fa-instagram"></i></li>
+                                </div>
+
+                            </ul>
+                        </div>
+                        <div class="col-lg-6 quantily ">
+                            <form action="" class="d-flex align-items-ct">
+                                <span (click)="mark('-')"><i class="fa-solid fa-minus"></i></span>
+                                <input type="number" id="quantily" class="quantily-ip" value="1">
+                                <span (click)="mark('+')"><i class="fa-solid fa-plus"></i></span>
+                            </form>
+                        </div>
+                        <div class="details-btn mt-5">
+                            <button class="add-cart" (click)="addCart(this.product.id)"><i
+                                    class="fa-solid fa-basket-shopping "></i>
+                                add to cart</button>
+                        </div>
+                    </div>
+
+
+                </div>
+
+            </div>
+        </div>
+    </div>
+    <div class="details-nav">
+        <div class="container-fluid ">
+            <div class="row">
+                <div class="col-lg-12 ">
+                    <div class="details-nav-tabs d-flex align-items-ct justify-content-ct flex-wrap">
+                        <h3 class="tab-btn show-tab" data-id="descriptions" value="20">descriptions</h3>
+                        <h3 class="tab-btn" data-id="specifications" value="20">Specifications</h3>
+                        <h3 class="tab-btn" data-id="reviews" value="20">reviews (2)</h3>
+                    </div>
+                </div>
+
+                <div class="details-nav-content w-100">
+                    <div class="nav-content nav-descriptions show-content" id="descriptions">
+                        <div class="container-fluid">
+                            <div class="row">
+                                <div class="col-lg-6">
+                                    <div class="descriptions-text details-nav-item">
+                                        <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Porro debitis
+                                            asperiores laborum accusantium, modi ullam necessitatibus nam
+                                            dignissimos minima
+                                            blanditiis. Ratione cupiditate quibusdam dolores suscipit autem culpa,
+                                            nihil
+                                            error aspernatur!</p>
+                                        <ul>
+                                            <li>Lorem ipsum dolor sit amet consectetur adipisicing.</li>
+                                            <li>Lorem ipsum dolor sit amet consectetur adipisicing.</li>
+                                            <li>Lorem ipsum dolor sit amet consectetur adipisicing.</li>
+                                            <li>Lorem ipsum dolor sit amet consectetur adipisicing.</li>
+                                        </ul>
+                                    </div>
+                                </div>
+                                <div class="col-lg-6">
+                                    <div class="descriptions-video details-nav-item">
+                                        <img src="https://mironmahmud.com/greeny/assets/ltr/images/video.jpg" alt=""
+                                            class="card-img">
+                                        <a class="play-video" data-toggle="modal" data-target="#exampleModal">
+                                            <i class="fa-solid fa-play"></i>
+                                        </a>
+
+                                        <!-- Modal -->
+                                        <div class="container-fluid ">
+                                            <div class="row justify-content-ct">
+                                                <div class="col-lg-6">
+                                                    <div class="modal fade" id="exampleModal" tabindex="-1"
+                                                        aria-labelledby="exampleModalLabel" aria-hidden="true">
+                                                        <div class="modal-dialog"
+                                                            style="max-width: none; width: 70%; height:80%;">
+                                                            <div class="modal-content" style="height: 100%;">
+                                                                <button type="button"
+                                                                    class="close d-flex justify-content-ct"
+                                                                    data-dismiss="modal" aria-label="Close">
+                                                                    <span aria-hidden="true">&times;</span>
+                                                                </button>
+
+                                                                <iframe width="100%" height="100%"
+                                                                    src="https://www.youtube.com/embed/9xzcVxSBbG8"
+                                                                    title="YouTube video player" frameborder="0"
+                                                                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                                                                    allowfullscreen></iframe>
+
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+                    <div class="nav-content nav-specifications " id="specifications">
+                        <div class="container-fluid ">
+                            <div class="row">
+                                <div class="col-lg-12">
+                                    <div class="table-infor details-nav-item">
+                                        <table cellspacing="1px">
+                                            <tbody>
+                                                <tr>
+                                                    <th>Product code</th>
+                                                    <td>SKU: 101783</td>
+                                                </tr>
+                                                <tr>
+                                                    <th>Weight</th>
+                                                    <td>1kg, 2kg</td>
+                                                </tr>
+                                                <tr>
+                                                    <th>Styles</th>
+                                                    <td>@Girly</td>
+                                                </tr>
+                                                <tr>
+                                                    <th>Properties</th>
+                                                    <td>Short Dress</td>
+                                                </tr>
+                                            </tbody>
+                                        </table>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+                    <div class="nav-content nav-reviews " id="reviews">
+                        <div class="container-fluid ">
+                            <div class="row">
+                                <div class="col-lg-12">
+                                    <div class="detail-review details-nav-item">
+
+                                        <h3>Add Your Review</h3>
+                                        <div class="detail-review-rating d-flex justify-content-ct">
+                                            <div id="rating_bar" style="height: 46px;">
+                                                <div class="rate">
+                                                    <input type="radio" id="star5" name="rate" value="5" />
+                                                    <label for="star5" title="text">5 stars</label>
+                                                    <input type="radio" id="star4" name="rate" value="4" />
+                                                    <label for="star4" title="text">4 stars</label>
+                                                    <input type="radio" id="star3" name="rate" value="3" />
+                                                    <label for="star3" title="text">3 stars</label>
+                                                    <input type="radio" id="star2" name="rate" value="2" />
+                                                    <label for="star2" title="text">2 stars</label>
+                                                    <input type="radio" id="star1" name="rate" value="1" />
+                                                    <label for="star1" title="text">1 star</label>
+                                                </div>
+
+                                            </div>
+                                        </div>
+
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+        </div>
+
+    </div>
+    <div class="related">
+        <div class="recently">
+            <h1>Related This Items</h1>
+            <div class="recently-product">
+                <div class="container-fluid ">
+                    <div class="row recently-group">
+                        <div class="recently-product-item col-lg-3 col-md-4 col-sm-6 mt-4"
+                            *ngFor="let item of listRelated">
+                            <div class="card product-card p-3" (click)="changeDetail(item.id)">
+                                <div class="product-image d-flex align-items-ct">
+                                    <img class="card-img-top" src="{{item.image}}" alt="Card image cap">
+                                    <div class="top-card-product d-flex justify-content-sb w-100">
+                                        <div class="top-left-product">
+                                            <span>Sale</span>
+                                        </div>
+                                        <div class="top-right-product">
+                                            <i class="fa-solid fa-heart"></i>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="product-content">
+                                    <div class="product-rating d-flex align-items-ct">
+                                        <i class="fa-solid fa-star"></i>
+                                        <i class="fa-solid fa-star"></i>
+                                        <i class="fa-solid fa-star"></i>
+                                        <i class="fa-solid fa-star"></i>
+                                        <i class="fa-solid fa-star"></i>
+                                        <span>(3)</span>
+                                    </div>
+                                    <h5 class="card-title">{{item.name}}</h5>
+                                    <h6 class="product-price">
+                                        <span class="price">${{item.price}}</span>
+                                        ${{item.sale_price}} <span style="font-weight: 500;">/piece</span>
+                                    </h6>
+                                    <a (click)="addCart(this.item.id) " class="w-100 btn-add d-flex align-items-ct"><i
+                                            class="fa-solid fa-basket-shopping"></i>
+                                        Add</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+            <div class="btn-show d-flex align-items-ct">
+                <a><i class="fa-solid fa-eye"></i> Show more</a>
+            </div>
+
+        </div>
+    </div>
+</main>

@@ -1,0 +1,368 @@
+<div class="container-fluid max-width bg-f5f6f7" style="padding: 0;">
+    <div class="banner">
+
+        <div id="carouselExampleControls" class="carousel slide" data-ride="carousel">
+            <div class="carousel-inner">
+                <div class="carousel-item active text-ct">
+                    <div class="banner-content w-100 d-flex align-items-ct ">
+                        <img src="https://mironmahmud.com/greeny/assets/ltr/images/home/index/02.png" alt=""
+                            class="col-lg-6 col-md-6">
+                        <div class="banner-text col-lg-6 col-md-6">
+                            <h1 class="">free home delivery within 24 hours now.</h1>
+                            <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Atque illum est quos voluptas
+                                ducimus tenetur eum cupiditate neque? Tempora architecto aliquam quasi nihil aperiam,
+                                beatae deleniti quo provident quisquam suscipit!</p>
+                            <div class="banner-btn">
+                                <button routerLink="/products"><i class="fa-brands fa-shopify"></i> Shop now</button>
+                                <button><i class="fa-solid fa-money-bill-1-wave"></i> get offer</button>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+                <div class="carousel-item">
+                    <div class="banner-content w-100 d-flex align-items-ct ">
+
+                        <div class="banner-text col-lg-6 col-md-6">
+                            <h1 class="">free home delivery within 24 hours now.</h1>
+                            <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Atque illum est quos voluptas
+                                ducimus tenetur eum cupiditate neque? Tempora architecto aliquam quasi nihil aperiam,
+                                beatae deleniti quo provident quisquam suscipit!</p>
+                            <div class="banner-btn">
+                                <button routerLink="/products"><i class="fa-brands fa-shopify"></i> Shop now</button>
+                                <button><i class="fa-solid fa-money-bill-1-wave"></i> get offer</button>
+                            </div>
+                        </div>
+                        <img src="https://mironmahmud.com/greeny/assets/ltr/images/home/index/01.png" alt=""
+                            class="col-lg-6 col-md-6">
+                    </div>
+                </div>
+            </div>
+            <a class="carousel-control-prev change" href="#carouselExampleControls" role="button" data-slide="prev">
+                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                <span class="sr-only">Previous</span>
+            </a>
+            <a class="carousel-control-next change" href="#carouselExampleControls" role="button" data-slide="next">
+                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                <span class="sr-only">Next</span>
+            </a>
+        </div>
+    </div>
+    <div class="category-carousel category-group">
+        <owl-carousel-o [options]="customOptions">
+            <ng-template carouselSlide *ngFor="let item of listCategory">
+                <div class="category-item">
+                    <img src="{{item.image}}" alt="">
+                    <div class="category-text">
+                        <div>
+                            <h5>{{item.name}}</h5>
+                            <p>20 items</p>
+                        </div>
+                    </div>
+                </div>
+            </ng-template>
+        </owl-carousel-o>
+    </div>
+
+    <div class="container-fluid bg-f5f6f7 mt-4">
+        <div class="recently  ">
+            <h1>Recently Sold Items</h1>
+            <div class="recently-product">
+                <div class="container-fluid">
+                    <div class="row recently-group">
+                        <div class="recently-product-item col-lg-3 col-md-4 col-sm-6 mt-4"
+                            *ngFor="let item of listRecently">
+                            <div class="card product-card p-3">
+                                <div class="product-image d-flex align-items-ct" routerLink="detail/{{item.id}}">
+                                    <img class="card-img-top" src="{{item.image}}" alt="Card image cap">
+                                    <div class="top-card-product d-flex justify-content-sb w-100">
+                                        <div class="top-left-product">
+                                            <span *ngIf="item.sale == true"
+                                                class="product-sale d-block mt-1">Sale</span>
+                                            <span *ngIf="item.new == true" class="product-new d-block mt-1"
+                                                style="background-color: #11b76b;">New</span>
+                                            <span *ngIf="item.feature == true" class="product-feature d-block mt-1"
+                                                style="background-color:#b12fad ;">Feature</span>
+                                        </div>
+                                        <div class="top-right-product">
+                                            <i class="fa-solid fa-heart"></i>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="product-content">
+                                    <div class="product-rating d-flex align-items-ct">
+                                        <i class="fa-solid fa-star"></i>
+                                        <i class="fa-solid fa-star"></i>
+                                        <i class="fa-solid fa-star"></i>
+                                        <i class="fa-solid fa-star"></i>
+                                        <i class="fa-solid fa-star"></i>
+                                        <span>(3)</span>
+                                    </div>
+                                    <h5 class="card-title">{{item.name}}</h5>
+                                    <h6 class="product-price">
+                                        <span class="price">${{item.price}}</span>
+                                        ${{item.sale_price}} <span style="font-weight: 500;">/piece</span>
+                                    </h6>
+                                    <a (click)="addCart(this.item.id)" class="w-100 btn-add d-flex align-items-ct"><i
+                                            class="fa-solid fa-basket-shopping"></i>
+                                        Add</a>
+
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+            <div class="btn-show d-flex align-items-ct" routerLink="products">
+                <a><i class="fa-solid fa-eye"></i> Show more</a>
+            </div>
+
+        </div>
+    </div>
+    <div class="promo ">
+        <div class="container-fluid ">
+            <div class="row align-items-ct promo">
+                <a href="" class="col-lg-12 ">
+                    <img src="https://mironmahmud.com/greeny/assets/ltr/images/promo/home/03.jpg" alt="" width="100%">
+                </a>
+            </div>
+        </div>
+    </div>
+
+    <div class="collected-new">
+        <h1>Collected New Items</h1>
+        <div class="carousel">
+            <owl-carousel-o [options]="collected">
+                <ng-template carouselSlide *ngFor="let item of listNew">
+                    <div class="recently-product-item ">
+                        <div class="card product-card p-3">
+                            <div class="product-image d-flex align-items-ct" routerLink="detail/{{item.id}}">
+                                <img class="card-img-top" src="{{item.image}}" alt="Card image cap">
+                                <div class="top-card-product d-flex justify-content-sb w-100">
+                                    <div class="top-left-product">
+                                        <span *ngIf="item.sale == true" class="product-sale d-block mt-1">Sale</span>
+                                        <span *ngIf="item.new == true" class="product-new d-block mt-1"
+                                            style="background-color: #11b76b;">New</span>
+                                        <span *ngIf="item.feature == true" class="product-feature d-block mt-1"
+                                            style="background-color:#b12fad ;">Feature</span>
+                                    </div>
+                                    <div class="top-right-product">
+                                        <i class="fa-solid fa-heart"></i>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="product-content">
+                                <div class="product-rating d-flex align-items-ct">
+                                    <i class="fa-solid fa-star"></i>
+                                    <i class="fa-solid fa-star"></i>
+                                    <i class="fa-solid fa-star"></i>
+                                    <i class="fa-solid fa-star"></i>
+                                    <i class="fa-solid fa-star"></i>
+                                    <span>(3)</span>
+                                </div>
+                                <h5 class="card-title">{{item.name}}</h5>
+                                <h6 class="product-price">
+                                    <span class="price">${{item.price}}</span>
+                                    ${{item.sale_price}} <span style="font-weight: 500;">/piece</span>
+                                </h6>
+                                <a (click)="addCart(this.item.id)" class="w-100 btn-add d-flex align-items-ct"><i
+                                        class="fa-solid fa-basket-shopping"></i>
+                                    Add</a>
+                            </div>
+                        </div>
+                    </div>
+                </ng-template>
+            </owl-carousel-o>
+            <div class="btn-show d-flex align-items-ct" routerLink="products" routerLink="products">
+                <a><i class="fa-solid fa-eye"></i> Show more</a>
+            </div>
+        </div>
+    </div>
+
+    <div class="promo ">
+        <div class="container-fluid ">
+            <div class="row align-items-ct promo">
+                <a href="" class="col-lg-6 p-2">
+                    <img src="https://mironmahmud.com/greeny/assets/ltr/images/promo/home/01.jpg" alt="" width="100%">
+                </a>
+                <a href="" class="col-lg-6 p-2">
+                    <img src="https://mironmahmud.com/greeny/assets/ltr/images/promo/home/02.jpg" alt="" width="100%">
+                </a>
+            </div>
+        </div>
+    </div>
+
+
+    <div class="browse-by-top bg btn-show bg-f5f6f7">
+        <h1>Browse By Top Niche</h1>
+        <div class="container-fluid">
+            <div class="list-browse d-flex" (click)="addStyle($event)">
+                <div class="browse-item top" data-id="top1" id="top" (click)="showTop('order')">
+                    <i class="fa-solid fa-credit-card"></i>
+                    Top order
+                </div>
+                <div class="browse-item" data-id="top2" id="top" (click)="showTop('rating')">
+                    <i class="fa-solid fa-star"></i>
+                    Top Rating
+                </div>
+                <div class="browse-item" data-id="top3" id="top" (click)="showTop('discount')">
+                    <i class="fa-solid fa-percent"></i>
+                    top discount
+                </div>
+            </div>
+        </div>
+        <div class="top-product ">
+            <div class="top-order fade showPro" id="showOrder">
+                <div class="recently-product">
+                    <div class="container-fluid">
+                        <div class="row recently-group">
+                            <div class="recently-product-item col-lg-3 col-md-4 col-sm-6 mt-4"
+                                *ngFor="let item of listOrder">
+                                <div class="card product-card p-3">
+                                    <div class="product-image d-flex align-items-ct" routerLink="detail/{{item.id}}">
+                                        <img class="card-img-top" src="{{item.image}}" alt="Card image cap">
+                                        <div class="top-card-product d-flex justify-content-sb w-100">
+                                            <div class="top-left-product">
+                                                <span *ngIf="item.sale == true"
+                                                    class="product-sale d-block mt-1">Sale</span>
+                                                <span *ngIf="item.new == true" class="product-new d-block mt-1"
+                                                    style="background-color: #11b76b;">New</span>
+                                                <span *ngIf="item.feature == true" class="product-feature d-block mt-1"
+                                                    style="background-color:#b12fad ;">Feature</span>
+                                            </div>
+                                            <div class="top-right-product">
+                                                <i class="fa-solid fa-heart"></i>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="product-content">
+                                        <div class="product-rating d-flex align-items-ct">
+                                            <i class="fa-solid fa-star"></i>
+                                            <i class="fa-solid fa-star"></i>
+                                            <i class="fa-solid fa-star"></i>
+                                            <i class="fa-solid fa-star"></i>
+                                            <i class="fa-solid fa-star"></i>
+                                            <span>(3)</span>
+                                        </div>
+                                        <h5 class="card-title">{{item.name}}</h5>
+                                        <h6 class="product-price">
+                                            <span class="price">${{item.price}}</span>
+                                            ${{item.sale_price}} <span style="font-weight: 500;">/piece</span>
+                                        </h6>
+                                        <a (click)="addCart(this.item.id)"
+                                            class="w-100 btn-add d-flex align-items-ct"><i
+                                                class="fa-solid fa-basket-shopping"></i>
+                                            Add</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+            <div class="top-rating fade" id="showRating">
+                <div class="recently-product">
+                    <div class="container-fluid">
+                        <div class="row recently-group">
+                            <div class="recently-product-item col-lg-3 col-md-4 col-sm-6 mt-4"
+                                *ngFor="let item of listRating">
+                                <div class="card product-card p-3">
+                                    <div class="product-image d-flex align-items-ct" routerLink="detail/{{item.id}}">
+                                        <img class="card-img-top" src="{{item.image}}" alt="Card image cap">
+                                        <div class="top-card-product d-flex justify-content-sb w-100">
+                                            <div class="top-left-product">
+                                                <span *ngIf="item.sale == true"
+                                                    class="product-sale d-block mt-1">Sale</span>
+                                                <span *ngIf="item.new == true" class="product-new d-block mt-1"
+                                                    style="background-color: #11b76b;">New</span>
+                                                <span *ngIf="item.feature == true" class="product-feature d-block mt-1"
+                                                    style="background-color:#b12fad ;">Feature</span>
+                                            </div>
+                                            <div class="top-right-product">
+                                                <i class="fa-solid fa-heart"></i>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="product-content">
+                                        <div class="product-rating d-flex align-items-ct">
+                                            <i class="fa-solid fa-star"></i>
+                                            <i class="fa-solid fa-star"></i>
+                                            <i class="fa-solid fa-star"></i>
+                                            <i class="fa-solid fa-star"></i>
+                                            <i class="fa-solid fa-star"></i>
+                                            <span>(3)</span>
+                                        </div>
+                                        <h5 class="card-title">{{item.name}}</h5>
+                                        <h6 class="product-price">
+                                            <span class="price">${{item.price}}</span>
+                                            ${{item.sale_price}} <span style="font-weight: 500;">/piece</span>
+                                        </h6>
+                                        <a (click)="addCart(this.item.id)"
+                                            class="w-100 btn-add d-flex align-items-ct"><i
+                                                class="fa-solid fa-basket-shopping"></i>
+                                            Add</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+            <div class="top-discount fade" id="showDiscount">
+                <div class="recently-product">
+                    <div class="container-fluid">
+                        <div class="row recently-group">
+                            <div class="recently-product-item col-lg-3 col-md-4 col-sm-6 mt-4"
+                                *ngFor="let item of listDiscount">
+                                <div class="card product-card p-3">
+                                    <div class="product-image d-flex align-items-ct" routerLink="detail/{{item.id}}">
+                                        <img class="card-img-top" src="{{item.image}}" alt="Card image cap">
+                                        <div class="top-card-product d-flex justify-content-sb w-100">
+                                            <div class="top-left-product">
+                                                <span *ngIf="item.sale == true"
+                                                    class="product-sale d-block mt-1">Sale</span>
+                                                <span *ngIf="item.new == true" class="product-new d-block mt-1"
+                                                    style="background-color: #11b76b;">New</span>
+                                                <span *ngIf="item.feature == true" class="product-feature d-block mt-1"
+                                                    style="background-color:#b12fad ;">Feature</span>
+                                            </div>
+                                            <div class="top-right-product">
+                                                <i class="fa-solid fa-heart"></i>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="product-content">
+                                        <div class="product-rating d-flex align-items-ct">
+                                            <i class="fa-solid fa-star"></i>
+                                            <i class="fa-solid fa-star"></i>
+                                            <i class="fa-solid fa-star"></i>
+                                            <i class="fa-solid fa-star"></i>
+                                            <i class="fa-solid fa-star"></i>
+                                            <span>(3)</span>
+                                        </div>
+                                        <h5 class="card-title">{{item.name}}</h5>
+                                        <h6 class="product-price">
+                                            <span class="price">${{item.price}}</span>
+                                            ${{item.sale_price}} <span style="font-weight: 500;">/piece</span>
+                                        </h6>
+                                        <a (click)="addCart(this.item.id)"
+                                            class="w-100 btn-add d-flex align-items-ct"><i
+                                                class="fa-solid fa-basket-shopping"></i>
+                                            Add</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+
+        <div class="btn-show d-flex align-items-ct" routerLink="products">
+            <a><i class="fa-solid fa-eye"></i> Show more</a>
+        </div>
+    </div>

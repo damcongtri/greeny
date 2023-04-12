@@ -1,0 +1,254 @@
+<main>
+    <div class="single-banner">
+        <h2>List Product</h2>
+        <div class="breadcrumb bg-none">
+            <div class="breadcrumb-item">
+                <span>Home</span> / <a class="location">All Product</a>
+            </div>
+        </div>
+    </div>
+
+    <div class="shop-part">
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-lg-3 col-md-12 order-flex container">
+                    <div class="shop-widget-promo">
+                        <a href="#">
+                            <img src="https://mironmahmud.com/greeny/assets/ltr/images/promo/shop/01.jpg"
+                                class="card-img" alt="">
+                        </a>
+                    </div>
+                    <div class="shop-widget">
+                        <h6>Filter by Price</h6>
+                        <form action="">
+                            <div class="shop-widget-group ">
+                                <input class=" ip-price" type="number" name="" id="min" placeholder="Min - 00">
+                                <input class=" ip-price" type="number" name="" id="max" placeholder="Max - 5k">
+                            </div>
+                            <div class="btn-search d-flex">
+                                <button class="search-price" (click)="clearPrice()"><i
+                                        class="fa-solid fa-trash-can"></i> Clear
+                                </button>
+                                <button class="search-price" (click)="filter()"><i
+                                        class="fa-solid fa-magnifying-glass"></i>
+                                    Search</button>
+                            </div>
+                        </form>
+                    </div>
+                    <div class="shop-widget">
+                        <h6>Filter by Rating</h6>
+                        <form action="">
+                            <ul>
+                                <li class="d-flex justify-content-sb align-items-ct">
+                                    <div class="shop-widget-content d-flex align-items-ct">
+                                        <input type="checkbox" name="" id="star1">
+                                        <label for="star1" class="m-0 d-flex ">
+                                            <i class="fa-solid fa-star star-y"></i>
+                                            <i class="fa-solid fa-star star-y"></i>
+                                            <i class="fa-solid fa-star star-y"></i>
+                                            <i class="fa-solid fa-star star-y"></i>
+                                            <i class="fa-solid fa-star star-y"></i>
+                                        </label>
+                                    </div>
+                                    <span class="shop-widget-number">(7)</span>
+                                </li>
+                                <li class="d-flex justify-content-sb align-items-ct">
+                                    <div class="shop-widget-content d-flex align-items-ct">
+                                        <input type="checkbox" name="" id="star2">
+                                        <label for="star2" class="m-0 d-flex ">
+                                            <i class="fa-solid fa-star star-y"></i>
+                                            <i class="fa-solid fa-star star-y"></i>
+                                            <i class="fa-solid fa-star star-y"></i>
+                                            <i class="fa-solid fa-star star-y"></i>
+                                            <i class="fa-solid fa-star star-n"></i>
+                                        </label>
+                                    </div>
+                                    <span class="shop-widget-number">(7)</span>
+                                </li>
+                                <li class="d-flex justify-content-sb align-items-ct">
+                                    <div class="shop-widget-content d-flex align-items-ct">
+                                        <input type="checkbox" name="" id="star3">
+                                        <label for="star3" class="m-0 d-flex ">
+                                            <i class="fa-solid fa-star star-y"></i>
+                                            <i class="fa-solid fa-star star-y"></i>
+                                            <i class="fa-solid fa-star star-y"></i>
+                                            <i class="fa-solid fa-star star-n"></i>
+                                            <i class="fa-solid fa-star star-n"></i>
+                                        </label>
+                                    </div>
+                                    <span class="shop-widget-number">(7)</span>
+                                </li>
+                                <li class="d-flex justify-content-sb align-items-ct">
+                                    <div class="shop-widget-content d-flex align-items-ct">
+                                        <input type="checkbox" name="" id="star4">
+                                        <label for="star4" class="m-0 d-flex ">
+                                            <i class="fa-solid fa-star star-y"></i>
+                                            <i class="fa-solid fa-star star-y"></i>
+                                            <i class="fa-solid fa-star star-n"></i>
+                                            <i class="fa-solid fa-star star-n"></i>
+                                            <i class="fa-solid fa-star star-n"></i>
+                                        </label>
+                                    </div>
+                                    <span class="shop-widget-number">(7)</span>
+                                </li>
+                                <li class="d-flex justify-content-sb align-items-ct">
+                                    <div class="shop-widget-content d-flex align-items-ct">
+                                        <input type="checkbox" name="" id="star5">
+                                        <label for="star5" class="m-0 d-flex ">
+                                            <i class="fa-solid fa-star star-y"></i>
+                                            <i class="fa-solid fa-star star-n"></i>
+                                            <i class="fa-solid fa-star star-n"></i>
+                                            <i class="fa-solid fa-star star-n"></i>
+                                            <i class="fa-solid fa-star star-n"></i>
+                                        </label>
+                                    </div>
+                                    <span class="shop-widget-number">(7)</span>
+                                </li>
+                            </ul>
+                            <div class="btn-search d-flex">
+                                <button class="search-price"><i class="fa-solid fa-trash-can"></i> Clear
+                                </button>
+                                <button class="search-price"><i class="fa-solid fa-magnifying-glass"></i>
+                                    Search</button>
+                            </div>
+                        </form>
+                    </div>
+                    <div class="shop-widget">
+                        <h6>FILTER BY TAG</h6>
+                        <form action="">
+                            <ul>
+                                <li class="d-flex justify-content-sb align-items-ct">
+                                    <div class="shop-widget-content d-flex align-items-ct">
+                                        <input type="checkbox" name="" id="new">
+                                        <label for="new" class="m-0 ">
+                                            New Items
+                                        </label>
+                                    </div>
+                                    <span class="shop-widget-number">(7)</span>
+                                </li>
+                                <li class="d-flex justify-content-sb align-items-ct">
+                                    <div class="shop-widget-content d-flex align-items-ct">
+                                        <input type="checkbox" name="" id="sale">
+                                        <label for="sale" class="m-0 ">
+                                            Sale Items
+                                        </label>
+                                    </div>
+                                    <span class="shop-widget-number">(7)</span>
+                                </li>
+                                <li class="d-flex justify-content-sb align-items-ct">
+                                    <div class="shop-widget-content d-flex align-items-ct">
+                                        <input type="checkbox" name="" id="feature">
+                                        <label for="feature" class="m-0 ">
+                                            Feature Items
+                                        </label>
+                                    </div>
+                                    <span class="shop-widget-number">(7)</span>
+                                </li>
+
+                            </ul>
+                            <div class="btn-search d-flex">
+                                <button class="search-price" (click)="clearTag()"><i class="fa-solid fa-trash-can"></i>
+                                    Clear
+                                </button>
+                                <button class="search-price" (click)="filter()"><i
+                                        class="fa-solid fa-magnifying-glass"></i>
+                                    Search</button>
+                            </div>
+                        </form>
+                    </div>
+                    <div class="shop-widget">
+                        <h6>FILTER BY category</h6>
+                        <form action="">
+                            <input type="text" placeholder="Search..." class="search-category">
+                            <ul class=" shop-scroll">
+                                <li class="d-flex justify-content-sb align-items-ct" *ngFor="let item of listCategory">
+                                    <div class="shop-widget-content d-flex align-items-ct">
+                                        <input type="checkbox" name="" id="category{{item.id}}">
+                                        <label for="category{{item.id}}" class="m-0 ">
+                                            {{item.name}}
+                                        </label>
+                                    </div>
+                                    <span class="shop-widget-number">(7)</span>
+                                </li>
+                            </ul>
+                            <div class="btn-search d-flex">
+                                <button class="search-price" (click)="clearCategoris()"><i
+                                        class="fa-solid fa-trash-can"></i> Clear
+                                </button>
+                                <button class="search-price" (click)="filter()"><i
+                                        class="fa-solid fa-magnifying-glass"></i>
+                                    Search</button>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+                <div class="col-lg-9 col-md-12 p-0" id="scroll">
+                    <div class="container-fluid bg-f5f6f7  p-0">
+                        <div class="recently  ">
+                            <div class="recently-product">
+                                <div class="container-fluid">
+                                    <div class="row recently-group">
+                                        <div class="recently-product-item col-xl-3 col-lg-4 col-md-3 col-sm-6 mb-4"
+                                            *ngFor="let item of list">
+                                            <div class="card product-card p-3">
+                                                <div class="product-image d-flex align-items-ct"
+                                                    routerLink="/detail/{{item.id}}">
+                                                    <img class=" card-img-top" src="{{item.image}}"
+                                                        alt="Card image cap">
+                                                    <div class="top-card-product d-flex justify-content-sb w-100">
+                                                        <div class="top-left-product">
+                                                            <span *ngIf="item.sale == true"
+                                                                class="product-sale d-block mt-1">Sale</span>
+                                                            <span *ngIf="item.new == true"
+                                                                class="product-new d-block mt-1"
+                                                                style="background-color: #11b76b;">New</span>
+                                                            <span *ngIf="item.feature == true"
+                                                                class="product-feature d-block mt-1"
+                                                                style="background-color:#b12fad ;">Feature</span>
+                                                        </div>
+                                                        <div class="top-right-product">
+                                                            <i class="fa-solid fa-heart"></i>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="product-content">
+                                                    <div class="product-rating d-flex align-items-ct">
+                                                        <i class="fa-solid fa-star"></i>
+                                                        <i class="fa-solid fa-star"></i>
+                                                        <i class="fa-solid fa-star"></i>
+                                                        <i class="fa-solid fa-star"></i>
+                                                        <i class="fa-solid fa-star"></i>
+                                                        <span>(3)</span>
+                                                    </div>
+                                                    <h5 class="card-title">{{item.name}}</h5>
+                                                    <h6 class="product-price">
+                                                        <span class="price">${{item.price}}</span>
+                                                        ${{item.sale_price}} <span
+                                                            style="font-weight: 500;">/piece</span>
+                                                    </h6>
+                                                    <a (click)="addCart(this.item.id) "
+                                                        class="w-100 btn-add d-flex align-items-ct"><i
+                                                            class="fa-solid fa-basket-shopping"></i>
+                                                        Add</a>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                            </div>
+                            <div class="numberPage btn-show d-flex align-items-ct">
+                                <div class="mr-2" *ngFor="let item of listpage">
+                                    <a (click)="changePage(item)" id="{{item}}"
+                                        [class.page]="checkPage == item">{{item}}</a>
+                                </div>
+                            </div>
+
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</main>

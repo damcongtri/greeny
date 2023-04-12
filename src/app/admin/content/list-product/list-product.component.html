@@ -1,0 +1,36 @@
+<div class="d-flex mb-2" style="justify-content:space-between;">
+    <h3>List Products</h3>
+    <button type="button" class="btn btn-warning text-light m-2" routerLink="/admin/add-product"><i
+            class="fa-solid fa-plus mr-1"></i>New</button>
+</div>
+<table class="table">
+    <thead>
+        <tr>
+            <th>Serial</th>
+            <th>Name</th>
+            <th>Price</th>
+            <th>Sale-Price</th>
+            <th>Image</th>
+            <th>Status</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor="let item of list; let i = index" class="">
+            <!-- <tr> -->
+            <td scope="row">{{i+1}}</td>
+
+            <td>{{item.name}}</td>
+            <td>{{item.price}}$</td>
+            <td>{{item.sale_price}}$</td>
+
+            <td><img src="{{item.image}}" alt="" style="max-width:100px ;max-height: 80px;"></td>
+
+
+            <td><button type="button" class="btn btn-primary mr-1" routerLink="/admin/edit-product/{{item.id}}"><i
+                        class="fa-solid fa-pen-to-square"></i></button>
+                <button type="button" class="btn btn-danger" (click)="deleteStudent(item.id)"><i
+                        class="fa-solid fa-trash-can"></i></button>
+            </td>
+        </tr>
+    </tbody>
+</table>
