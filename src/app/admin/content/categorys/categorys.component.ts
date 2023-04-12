@@ -17,10 +17,9 @@ export class CategorysComponent implements OnInit {
   }
   deleteCategory(id: any) {
     if (confirm('Are you delete ?')) {
-      this.service.deleteCategory(id).subscribe(() => {
-        this.service.getAll().subscribe(data => {
-          this.list = data
-        })
+      this.service.deleteCategory(id).subscribe()
+      this.service.getCategory().subscribe(data => {
+        this.list = data
       })
     }
   }

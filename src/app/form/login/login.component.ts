@@ -19,8 +19,8 @@ export class LoginComponent implements OnInit {
 
   ngOnInit(): void {
     this.formData.patchValue({
-      email: "main@5678.com",
-      password: "123456"
+      email: "trid2300@gmail.com",
+      password: "tri2003"
     })
   }
   submit() {

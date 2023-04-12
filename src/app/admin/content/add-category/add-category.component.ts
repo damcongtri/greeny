@@ -24,9 +24,8 @@ export class AddCategoryComponent implements OnInit {
     if (!this.formData.value.image) {
       this.checkImg = true
     } else {
-      this.service.postCategory(this.formData.value).subscribe(() => {
-        alert('Done')
-      })
+      this.service.postCategory(this.formData.value).subscribe()
+      alert('Done')
     }
   }
 

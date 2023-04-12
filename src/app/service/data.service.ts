@@ -71,7 +71,7 @@ export class DataService {
   postProduct(data: Product): Observable<any> {
     return this.http.post(`${urlAPI}/product`, data)
   }
-  deleteProduct(id: number): Observable<any> {
+  deleteProduct(id: number) {
     return this.http.delete(`${urlAPI}/product/${id}`)
   }
   putProduct(data: Product): Observable<any> {
@@ -80,7 +80,7 @@ export class DataService {
   postCategory(data: any): Observable<any> {
     return this.http.post(`${urlAPI}/category`, data)
   }
-  deleteCategory(id: number): Observable<any> {
+  deleteCategory(id: number) {
     return this.http.delete(`${urlAPI}/category/${id}`)
   }
   findUser(data: any): Observable<any> {
