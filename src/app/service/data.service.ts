@@ -5,7 +5,7 @@ import { Cart } from '../class/cart';
 import { Product } from '../class/product';
 import { User } from '../class/user';
 
-const urlAPI = 'http://localhost:3000'
+const urlAPI = 'https://jsonserver-black.vercel.app'
 @Injectable({
   providedIn: 'root'
 })
@@ -14,7 +14,7 @@ export class DataService {
   totalCart = new Subject<number>()
   lengthCart = new Subject<number>()
   constructor(private http: HttpClient) { }
-   getAll(): Observable<Product[]> {
+  getAll(): Observable<Product[]> {
     this.getCart().subscribe(data => {
       let total: number = 0
       let dataCHeck: any = []
