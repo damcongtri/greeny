@@ -28,7 +28,6 @@ export class AddCategoryComponent implements OnInit {
         alert('Done')
       })
     }
-    alert('ok')
   }
 
   changeImg(e: any) {

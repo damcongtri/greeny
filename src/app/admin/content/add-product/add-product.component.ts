@@ -76,7 +76,6 @@ export class AddProductComponent implements OnInit {
       this.service.postProduct(this.data).subscribe(() => {
         console.log(this.data);
       })
-      alert('ok')
     }
   }
   changeImg(e: any) {

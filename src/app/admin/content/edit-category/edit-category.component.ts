@@ -32,8 +32,8 @@ export class EditCategoryComponent implements OnInit {
       this.service.postCategory(this.formData.value).subscribe(() => {
         alert('Done')
       })
+      this.router.navigate(['admin/category'])
     }
-    alert('ok')
   }
 
   changeImg(e: any) {

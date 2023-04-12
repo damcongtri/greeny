@@ -62,9 +62,10 @@ export class EditProductComponent implements OnInit {
       this.data.image = this.formData.value.image
       this.service.putProduct(this.data,).subscribe(() => {
         console.log(this.data);
-        alert('Done')
-        this.router.navigate(['/admin/products'])
+
       })
+      alert('Done')
+      this.router.navigate(['/admin/products'])
     }
   }
   changeImg(e: any) {
@@ -127,7 +128,7 @@ export class EditProductComponent implements OnInit {
     let data: any = document.getElementById(id)
     // console.log(data.checked);
     if (data.checked) {
-      alert('ok')
+
       this.formData.value.category_id.push(id)
     } else {
       let index = this.formData.value.category_id.findIndex((item: any) => {

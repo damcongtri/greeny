@@ -35,10 +35,13 @@ export class RegisterComponent implements OnInit {
         if (data[0]) {
           alert('Email already exists')
         } else {
-          this.service.postUser(this.formData.value).subscribe(data => {
-            alert('Done')
-            this.router.navigate(['form'])
+          this.service.postUser(this.formData.value).subscribe(_ => {
+
+
+
           })
+          alert('Done')
+          this.router.navigate(['/form'])
         }
       })
 
