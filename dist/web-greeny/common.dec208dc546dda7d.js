@@ -1,0 +1,1 @@
+"use strict";(self.webpackChunkWebGreeny=self.webpackChunkWebGreeny||[]).push([[592],{4281:(a,c,r)=>{r.d(c,{x:()=>o});var n=r(4893);let o=(()=>{class e{}return e.\u0275fac=function(u){return new(u||e)},e.\u0275prov=n.Yz7({token:e,factory:e.\u0275fac,providedIn:"root"}),e})()}}]);
